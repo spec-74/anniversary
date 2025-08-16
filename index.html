@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💖 Our Magical 1-Year Anniversary 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #ff2d75;
+      --secondary: #ff6b9e;
+      --accent: #ff9ec6;
+      --light: #fff5f9;
+      --dark: #33001a;
+      --shadow: 0 8px 16px rgba(0,0,0,0.15);
+      --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #fff5f9, #ffebf3);
+      color: var(--dark);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      touch-action: manipulation;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 10;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      animation: fadeInDown 1s ease-out;
+    }
+    
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+      background: linear-gradient(to right, #ff2d75, #ff6b9e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      font-family: 'Sacramento', cursive;
+      font-size: 2.2rem;
+      color: var(--secondary);
+      margin-bottom: 2rem;
+    }
+    
+    /* Interactive Heart Button */
+    .heart-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 70px;
+      height: 70px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      z-index: 100;
+      transition: var(--transition);
+      animation: pulse 2s infinite;
+    }
+    
+    .heart-btn:hover {
+      transform: scale(1.1) rotate(10deg);
+      background: var(--secondary);
+    }
+    
+    .heart-btn i {
+      color: white;
+      font-size: 2rem;
+    }
+    
+    /* Memory Cards */
+    .memory-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .memory-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .memory-card h2 {
+      font-family: 'Sacramento', cursive;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .memory-card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Interactive Buttons */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+    
+    .btn:active {
+      transform: translateY(1px);
+    }
+    
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255,255,255,0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%, -50%);
+      transform-origin: 50% 50%;
+    }
+    
+    .btn:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
+    
+    /* Photo Gallery */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .photo-item {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: var(--transition);
+      aspect-ratio: 1/1;
+    }
+    
+    .photo-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    /* Memories List */
+    .memories-list {
+      margin-top: 1.5rem;
+    }
+    
+    .memory-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: var(--light);
+      border-radius: 15px;
+      transition: var(--transition);
+    }
+    
+    .memory-item:hover {
+      transform: translateX(5px);
+      background: #ffebf3;
+    }
+    
+    .memory-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .memory-text {
+      flex-grow: 1;
+    }
+    
+    /* Love Notes */
+    .note-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .note-input {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #ffd6e7;
+      border-radius: 15px;
+      font-size: 1rem;
+      resize: none;
+      transition: var(--transition);
+    }
+    
+    .note-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(255,45,117,0.2);
+    }
+    
+    .notes-container {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .note {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: var(--transition);
+    }
+    
+    .note:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .delete-note {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .delete-note:hover {
+      color: var(--secondary);
+      transform: rotate(90deg);
+    }
+    
+    /* Countdown */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .countdown-item {
+      text-align: center;
+    }
+    
+    .countdown-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .countdown-label {
+      font-size: 0.9rem;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* Promise Section */
+    .promise-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: var(--light);
+      border-radius: 15px;
+      transition: var(--transition);
+    }
+    
+    .promise-item:hover {
+      transform: translateX(5px);
+      background: #ffebf3;
+    }
+    
+    .promise-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-right: 1rem;
+    }
+    
+    /* Firsts Section */
+    .firsts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .first-item {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    
+    .first-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .first-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Floating Elements */
+    .floating {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+      animation-timing-function: linear;
+    }
+    
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes ripple {
+      0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(20, 20);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 3rem;
+      }
+      
+      .subtitle {
+        font-size: 1.8rem;
+      }
+      
+      .memory-card h2 {
+        font-size: 2rem;
+      }
+      
+      .countdown {
+        gap: 1rem;
+      }
+      
+      .countdown-number {
+        font-size: 2rem;
+      }
+      
+      .firsts-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+      
+      .btn {
+        padding: 0.8rem 1.5rem;
+      }
+      
+      .countdown {
+        flex-wrap: wrap;
+      }
+      
+      .countdown-item {
+        width: 45%;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Elements Background -->
+  <div id="floating-elements"></div>
+  
+  <!-- Main Container -->
+  <div class="container">
+    <header>
+      <h1>Happy 1-Year Anniversary!</h1>
+      <p class="subtitle">365 Days of Love and Happiness</p>
+      <div style="animation: heartbeat 1.5s infinite; font-size: 3rem;">❤️</div>
+    </header>
+    
+    <!-- Our Story -->
+    <div class="memory-card" id="our-story">
+      <h2>Our Beautiful Journey</h2>
+      <p>From our first hello to every "I love you" since, this year has been the most magical chapter of my life. Every moment with you is a treasure I'll cherish forever.</p>
+      <button class="btn" id="story-btn">Read Our Love Story</button>
+      <div id="full-story" style="display: none; margin-top: 1.5rem;">
+        <p>I remember the first time we met like it was yesterday. The way you smiled, the sound of your laugh, the way my heart skipped a beat when our eyes met. Little did I know that moment would change my life forever.</p>
+        <p>Our first date was magical, and every moment since has been even better. From our adventures to our quiet nights in, every second with you feels like a dream come true.</p>
+        <p>This past year has shown me what true love really means. Through the good times and the challenges, our love has only grown stronger. I fall more in love with you every single day.</p>
+      </div>
+    </div>
+    
+    <!-- Special Memories -->
+    <div class="memory-card" id="memories">
+      <h2>Our Special Memories</h2>
+      <p>These are the moments that have made this year so unforgettable.</p>
+      
+      <div class="memories-list" id="memories-list">
+        <div class="memory-item">
+          <div class="memory-icon">💑</div>
+          <div class="memory-text">Our first date at that little café where we talked for hours without noticing the time</div>
+        </div>
+        <div class="memory-item">
+          <div class="memory-icon">🌆</div>
+          <div class="memory-text">That weekend getaway when we got lost but discovered the most beautiful sunset</div>
+        </div>
+        <div class="memory-item">
+          <div class="memory-icon">😂</div>
+          <div class="memory-text">All the times we laughed until our stomachs hurt over the silliest things</div>
+        </div>
+        <div class="memory-item">
+          <div class="memory-icon">🌧️</div>
+          <div class="memory-text">Getting caught in the rain and dancing together like no one was watching</div>
+        </div>
+      </div>
+      
+      <div class="note-form" style="margin-top: 2rem;">
+        <input type="text" id="memory-input" class="note-input" placeholder="Add your favorite memory...">
+        <button class="btn" id="add-memory">Add Memory</button>
+      </div>
+    </div>
+    
+    <!-- Photo Gallery -->
+    <div class="memory-card" id="gallery">
+      <h2>Our Photo Gallery</h2>
+      <p>Every picture tells the story of our love.</p>
+      
+      <div class="photo-grid" id="memory-gallery">
+        <!-- Photos will be added here by JavaScript -->
+      </div>
+      
+      <div class="note-form">
+        <input type="file" id="photo-upload" accept="image/*" multiple style="display: none;">
+        <button class="btn" id="upload-btn">Add Our Photos</button>
+      </div>
+    </div>
+    
+    <!-- Our Firsts -->
+    <div class="memory-card" id="firsts">
+      <h2>Our Firsts</h2>
+      <p>All the special moments when we experienced something for the first time together.</p>
+      
+      <div class="firsts-grid">
+        <div class="first-item">
+          <div class="first-icon">💋</div>
+          <h3>First Kiss</h3>
+          <p>Under the stars that night we'll never forget</p>
+        </div>
+        <div class="first-item">
+          <div class="first-icon">✈️</div>
+          <h3>First Trip</h3>
+          <p>That weekend adventure that brought us closer</p>
+        </div>
+        <div class="first-item">
+          <div class="first-icon">🏠</div>
+          <h3>First Home</h3>
+          <p>Building our space together</p>
+        </div>
+        <div class="first-item">
+          <div class="first-icon">🎄</div>
+          <h3>First Holiday</h3>
+          <p>Creating traditions we'll cherish forever</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- My Promises -->
+    <div class="memory-card" id="promises">
+      <h2>My Promises to You</h2>
+      <p>These are the vows I make to you, today and always.</p>
+      
+      <div class="memories-list">
+        <div class="promise-item">
+          <div class="promise-icon">💖</div>
+          <div class="memory-text">I promise to love you more each day than the day before</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon">👂</div>
+          <div class="memory-text">I promise to always listen with my whole heart</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon">🤗</div>
+          <div class="memory-text">I promise to be your safe place in this chaotic world</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon">🌱</div>
+          <div class="memory-text">I promise to grow with you through all of life's seasons</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Love Notes -->
+    <div class="memory-card" id="love-notes">
+      <h2>Love Notes</h2>
+      <p>Leave sweet messages for each other to cherish.</p>
+      
+      <div class="note-form">
+        <textarea class="note-input" id="note-text" placeholder="Write your love note here..."></textarea>
+        <button class="btn" id="save-note">Save Note</button>
+      </div>
+      
+      <div class="notes-container" id="notes-list">
+        <!-- Notes will be added here by JavaScript -->
+      </div>
+    </div>
+    
+    <!-- Countdown -->
+    <div class="memory-card" id="countdown-card">
+      <h2>Until Our Next Anniversary</h2>
+      <p>Every second brings us closer to another year of love and happiness.</p>
+      
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-number" id="days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="seconds">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Secret Message -->
+    <div class="memory-card" id="secret-message">
+      <h2>For Your Eyes Only</h2>
+      <p>Touch the heart to reveal my secret message for you</p>
+      <div style="text-align: center; margin: 1rem 0;">
+        <div id="secret-heart" style="font-size: 3rem; cursor: pointer;">❤️</div>
+      </div>
+      <div id="secret-text" style="display: none; text-align: center; font-family: 'Sacramento', cursive; font-size: 1.8rem; color: var(--primary); margin-top: 1rem;">
+        You are the love of my life, today and forever.
+      </div>
+    </div>
+  </div>
+  
+  <!-- Interactive Heart Button -->
+  <div class="heart-btn" id="heart-btn">
+    <i class="fas fa-heart"></i>
+  </div>
+  
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000;"></canvas>
+  
+  <script>
+    // DOM Elements
+    const elements = {
+      storyBtn: document.getElementById('story-btn'),
+      fullStory: document.getElementById('full-story'),
+      memoryInput: document.getElementById('memory-input'),
+      addMemoryBtn: document.getElementById('add-memory'),
+      memoriesList: document.getElementById('memories-list'),
+      memoryGallery: document.getElementById('memory-gallery'),
+      uploadBtn: document.getElementById('upload-btn'),
+      photoUpload: document.getElementById('photo-upload'),
+      noteText: document.getElementById('note-text'),
+      saveNoteBtn: document.getElementById('save-note'),
+      notesList: document.getElementById('notes-list'),
+      countdown: {
+        days: document.getElementById('days'),
+        hours: document.getElementById('hours'),
+        minutes: document.getElementById('minutes'),
+        seconds: document.getElementById('seconds')
+      },
+      heartBtn: document.getElementById('heart-btn'),
+      floatingElements: document.getElementById('floating-elements'),
+      confettiCanvas: document.getElementById('confetti-canvas'),
+      secretHeart: document.getElementById('secret-heart'),
+      secretText: document.getElementById('secret-text')
+    };
+    
+    // State
+    const state = {
+      notes: JSON.parse(localStorage.getItem('loveNotes')) || [],
+      photos: JSON.parse(localStorage.getItem('memoryPhotos')) || [
+        'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+        'https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+        'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+        'https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      ],
+      memories: JSON.parse(localStorage.getItem('specialMemories')) || [
+        { icon: '💑', text: 'Our first date at that little café where we talked for hours without noticing the time' },
+        { icon: '🌆', text: 'That weekend getaway when we got lost but discovered the most beautiful sunset' },
+        { icon: '😂', text: 'All the times we laughed until our stomachs hurt over the silliest things' },
+        { icon: '🌧️', text: 'Getting caught in the rain and dancing together like no one was watching' }
+      ],
+      anniversaryDate: new Date(new Date().getFullYear() + 1, new Date().getMonth(), new Date().getDate()),
+      floatingElements: ['❤️', '✨', '🌹', '💖', '🥰', '😍', '💕', '💘']
+    };
+    
+    // Initialize
+    function init() {
+      // Set up event listeners
+      setupEventListeners();
+      
+      // Load saved data
+      renderNotes();
+      renderPhotos();
+      renderMemories();
+      
+      // Start animations
+      startFloatingElements();
+      startCountdown();
+      
+      // Initialize confetti
+      initConfetti();
+    }
+    
+    // Event Listeners
+    function setupEventListeners() {
+      // Story toggle
+      elements.storyBtn.addEventListener('click', toggleStory);
+      
+      // Memory adding
+      elements.addMemoryBtn.addEventListener('click', addMemory);
+      elements.memoryInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') addMemory();
+      });
+      
+      // Photo upload
+      elements.uploadBtn.addEventListener('click', () => elements.photoUpload.click());
+      elements.photoUpload.addEventListener('change', handlePhotoUpload);
+      
+      // Note saving
+      elements.saveNoteBtn.addEventListener('click', saveNote);
+      elements.noteText.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.key === 'Enter') saveNote();
+      });
+      
+      // Heart button (confetti)
+      elements.heartBtn.addEventListener('click', triggerConfetti);
+      
+      // Secret message
+      elements.secretHeart.addEventListener('click', toggleSecretMessage);
+      
+      // Allow dropping photos
+      document.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+      
+      document.addEventListener('drop', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.dataTransfer.files.length) {
+          elements.photoUpload.files = e.dataTransfer.files;
+          handlePhotoUpload();
+        }
+      });
+      
+      // Touch support for mobile
+      document.addEventListener('touchstart', handleTouch, { passive: true });
+    }
+    
+    // Touch support
+    function handleTouch(e) {
+      // Add ripple effect on touch
+      const ripple = document.createElement('div');
+      ripple.style.position = 'fixed';
+      ripple.style.width = '20px';
+      ripple.style.height = '20px';
+      ripple.style.background = 'rgba(255,255,255,0.5)';
+      ripple.style.borderRadius = '50%';
+      ripple.style.pointerEvents = 'none';
+      ripple.style.transform = 'translate(-50%, -50%)';
+      ripple.style.animation = 'ripple 1s ease-out';
+      ripple.style.zIndex = '1000';
+      
+      const touch = e.touches[0];
+      ripple.style.left = `${touch.clientX}px`;
+      ripple.style.top = `${touch.clientY}px`;
+      
+      document.body.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 1000);
+    }
+    
+    // Story Toggle
+    function toggleStory() {
+      const isHidden = elements.fullStory.style.display === 'none';
+      elements.fullStory.style.display = isHidden ? 'block' : 'none';
+      elements.storyBtn.textContent = isHidden ? 'Hide Story' : 'Read Our Love Story';
+      
+      if (isHidden) {
+        elements.fullStory.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+    
+    // Memory Handling
+    function addMemory() {
+      const text = elements.memoryInput.value.trim();
+      if (!text) return;
+      
+      const newMemory = {
+        icon: '💭',
+        text: text
+      };
+      
+      state.memories.push(newMemory);
+      localStorage.setItem('specialMemories', JSON.stringify(state.memories));
+      elements.memoryInput.value = '';
+      renderMemories();
+    }
+    
+    function renderMemories() {
+      elements.memoriesList.innerHTML = '';
+      state.memories.forEach((memory, index) => {
+        const memoryItem = document.createElement('div');
+        memoryItem.className = 'memory-item';
+        memoryItem.innerHTML = `
+          <div class="memory-icon">${memory.icon}</div>
+          <div class="memory-text">${memory.text}</div>
+          <button class="delete-note" onclick="deleteMemory(${index})">
+            <i class="fas fa-times"></i>
+          </button>
+        `;
+        elements.memoriesList.appendChild(memoryItem);
+      });
+    }
+    
+    function deleteMemory(index) {
+      state.memories.splice(index, 1);
+      localStorage.setItem('specialMemories', JSON.stringify(state.memories));
+      renderMemories();
+    }
+    
+    // Photo Handling
+    function handlePhotoUpload() {
+      const files = elements.photoUpload.files;
+      if (!files.length) return;
+      
+      Array.from(files).forEach(file => {
+        if (file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            state.photos.push(e.target.result);
+            localStorage.setItem('memoryPhotos', JSON.stringify(state.photos));
+            renderPhotos();
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+      
+      elements.photoUpload.value = '';
+    }
+    
+    function renderPhotos() {
+      elements.memoryGallery.innerHTML = '';
+      state.photos.forEach((photo, index) => {
+        const photoItem = document.createElement('div');
+        photoItem.className = 'photo-item';
+        photoItem.innerHTML = `
+          <img src="${photo}" alt="Our memory ${index + 1}" loading="lazy">
+          <button class="delete-note" onclick="deletePhoto(${index})" style="position: absolute; top: 5px; right: 5px;">
+            <i class="fas fa-times" style="color: white; background: rgba(0,0,0,0.5); padding: 5px; border-radius: 50%;"></i>
+          </button>
+        `;
+        elements.memoryGallery.appendChild(photoItem);
+      });
+    }
+    
+    function deletePhoto(index) {
+      state.photos.splice(index, 1);
+      localStorage.setItem('memoryPhotos', JSON.stringify(state.photos));
+      renderPhotos();
+    }
+    
+    // Note Handling
+    function saveNote() {
+      const text = elements.noteText.value.trim();
+      if (!text) return;
+      
+      state.notes.unshift({
+        text,
+        date: new Date().toLocaleString()
+      });
+      
+      localStorage.setItem('loveNotes', JSON.stringify(state.notes));
+      elements.noteText.value = '';
+      renderNotes();
+    }
+    
+    function renderNotes() {
+      elements.notesList.innerHTML = '';
+      state.notes.forEach((note, index) => {
+        const noteElement = document.createElement('div');
+        noteElement.className = 'note';
+        noteElement.innerHTML = `
+          <p>${note.text}</p>
+          <small style="color: var(--secondary); display: block; margin-top: 0.5rem;">${note.date}</small>
+          <button class="delete-note" onclick="deleteNote(${index})">
+            <i class="fas fa-times"></i>
+          </button>
+        `;
+        elements.notesList.appendChild(noteElement);
+      });
+    }
+    
+    function deleteNote(index) {
+      state.notes.splice(index, 1);
+      localStorage.setItem('loveNotes', JSON.stringify(state.notes));
+      renderNotes();
+    }
+    
+    // Countdown
+    function startCountdown() {
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+    
+    function updateCountdown() {
+      const now = new Date();
+      const diff = state.anniversaryDate - now;
+      
+      if (diff <= 0) {
+        elements.countdown.days.textContent = '00';
+        elements.countdown.hours.textContent = '00';
+        elements.countdown.minutes.textContent = '00';
+        elements.countdown.seconds.textContent = '00';
+        return;
+      }
+      
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      
+      elements.countdown.days.textContent = days.toString().padStart(2, '0');
+      elements.countdown.hours.textContent = hours.toString().padStart(2, '0');
+      elements.countdown.minutes.textContent = minutes.toString().padStart(2, '0');
+      elements.countdown.seconds.textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    // Floating Elements
+    function startFloatingElements() {
+      setInterval(createFloatingElement, 800);
+    }
+    
+    function createFloatingElement() {
+      const element = document.createElement('div');
+      element.className = 'floating';
+      element.textContent = state.floatingElements[Math.floor(Math.random() * state.floatingElements.length)];
+      element.style.left = Math.random() * 100 + 'vw';
+      element.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      element.style.opacity = Math.random() * 0.5 + 0.5;
+      element.style.animation = `floatUp ${Math.random() * 6 + 6}s linear forwards`;
+      
+      elements.floatingElements.appendChild(element);
+      
+      setTimeout(() => {
+        element.remove();
+      }, 7000);
+    }
+    
+    // Confetti
+    function initConfetti() {
+      elements.confettiCanvas.width = window.innerWidth;
+      elements.confettiCanvas.height = window.innerHeight;
+      window.addEventListener('resize', () => {
+        elements.confettiCanvas.width = window.innerWidth;
+        elements.confettiCanvas.height = window.innerHeight;
+      });
+    }
+    
+    function triggerConfetti() {
+      const canvas = elements.confettiCanvas;
+      const ctx = canvas.getContext('2d');
+      const particleCount = 150;
+      const particles = [];
+      
+      // Create particles
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: canvas.height + 100,
+          size: Math.random() * 10 + 5,
+          speed: Math.random() * 3 + 2,
+          color: `hsl(${Math.random() * 60 + 330}, 100%, 50%)`,
+          angle: Math.random() * Math.PI * 2,
+          rotation: Math.random() * 0.2 - 0.1,
+          rotationSpeed: Math.random() * 0.01 - 0.005
+        });
+      }
+      
+      // Animate
+      let animationId;
+      const animateConfetti = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        let stillActive = false;
+        
+        particles.forEach(particle => {
+          particle.y -= particle.speed;
+          particle.x += Math.sin(particle.angle) * 2;
+          particle.angle += particle.rotation;
+          
+          ctx.save();
+          ctx.translate(particle.x, particle.y);
+          ctx.rotate(particle.rotationSpeed * Date.now());
+          ctx.fillStyle = particle.color;
+          ctx.fillRect(-particle.size/2, -particle.size/2, particle.size, particle.size);
+          ctx.restore();
+          
+          if (particle.y > -particle.size) {
+            stillActive = true;
+          }
+        });
+        
+        if (stillActive) {
+          animationId = requestAnimationFrame(animateConfetti);
+        } else {
+          cancelAnimationFrame(animationId);
+        }
+      };
+      
+      animateConfetti();
+    }
+    
+    // Secret Message
+    function toggleSecretMessage() {
+      const isHidden = elements.secretText.style.display === 'none';
+      elements.secretText.style.display = isHidden ? 'block' : 'none';
+      elements.secretHeart.style.animation = isHidden ? 'heartbeat 1s 3' : 'none';
+      
+      if (isHidden) {
+        triggerConfetti();
+      }
+    }
+    
+    // Make functions available globally for HTML onclick
+    window.deletePhoto = deletePhoto;
+    window.deleteNote = deleteNote;
+    window.deleteMemory = deleteMemory;
+    
+    // Start the app
+    init();
+  </script>
+</body>
+</html>
